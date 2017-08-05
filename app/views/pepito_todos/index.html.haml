@@ -1,0 +1,21 @@
+!!!
+%h1="Todo's List"
+%table{:border => 1}
+	%th="Description"
+	%th="Status"
+	%th="Date"
+	%th="Actions"
+-@pepito_todos.each do |pepito_todo|
+	%tr
+		%td=pepito_todo.description
+		%td=pepito_todo.status
+		%td=pepito_todo.date
+		%td
+			%a{href: pepito_todo_path(pepito_todo)}
+				%h4="Show"
+			%a{href: edit_pepito_todo_path(pepito_todo)}
+				%h4="Edit"
+			%a{href: pepito_todo_path(pepito_todo)}
+				%h4="Delete"
+%a{href: new_pepito_todo_path}
+	%h4="Create a Pepito Todo"

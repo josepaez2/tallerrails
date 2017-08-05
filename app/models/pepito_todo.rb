@@ -1,0 +1,3 @@
+class PepitoTodo < ApplicationRecord
+
+end
